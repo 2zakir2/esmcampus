@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    background-color: #7B3FA0;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.branch-card {
+    position: relative;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.branch-card:hover {
+    background: #f1f1f1;
+}
+
+.branch-card a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    z-index: 1;
+}
+
+
+.branches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.branch-card {
+    display: block;
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.branch-card h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.branch-card p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.branch-card .location-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.branch-card i {
+    margin-right: 8px;
+    color: green;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    background-color: #7B3FA0;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 🔍 Search & Filter Section */
+
+
+
+
+
+/* 🏢 Branch Cards */
+.branches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.branch-card {
+    position: relative;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-card:hover {
+    background: #f9f9f9;
+    transform: scale(1.03);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.branch-card h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #7B3FA0;
+}
+
+.branch-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.branch-card .location-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: red;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.branch-card .location-icon:hover {
+    transform: scale(1.2);
+}
+
+.branch-card i {
+    margin-right: 8px;
+    color: green;
+}
+
+/* ✅ মোবাইলের জন্য রেসপন্সিভ ডিজাইন */
+
+
+@media screen and (max-width: 480px) {
+    .branches {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .branch-card h3 {
+        font-size: 18px;
+    }
+
+    .branch-card p {
+        font-size: 14px;
+    }
+
+    .location-icon {
+        font-size: 18px;
+    }
+}

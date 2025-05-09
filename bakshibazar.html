@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শাখা তথ্য</title>
+    <link rel="stylesheet" href="campus.css">
+    <link rel="stylesheet" href="wa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Modal Section -->
+    <div id="locationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-icon" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </span>
+            <h2>উদ্ভাস (ESM) বকশিবাজার ক্যাম্পাস (আপুদের জন্য)</h2>
+            <p>
+            <p><i class="fas fa-map-marker-alt"
+                    style="color: rgb(255, 255, 255); background-color: rgb(2, 165, 43); padding: 6px; border-radius: 100px;">
+                </i> ১৯/১,২ হেলিকন সেন্টার (২য় তলা, ডান পাশে),
+                বকশিবাজার সিগন্যাল পয়েন্ট, বকশিবাজার, ঢাকা-১২১১।
+            </p>
+            <p><i class="fas fa-phone fa-shake"
+                    style="color: rgb(255, 255, 255); background-color: rgb(2, 165, 43); padding: 7px; border-radius: 30px;">
+                </i>
+                01713236953 </p>
+            <p><i class="fas fa-phone fa-shake"
+                    style="color: rgb(255, 255, 255); background-color: rgb(2, 165, 43); padding: 7px; border-radius: 30px;">
+                </i> 01713236955</p> <!-- Google Map Embed -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332.46766231940325!2d90.3957053804313!3d23.724484035762078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9891494e1e9%3A0x12a29c1c6748864c!2z4KaJ4Kam4KeN4Kat4Ka-4Ka4IC0g4KaJ4Kao4KeN4Kau4KeH4Ka3IOCmrOCmleCmtuCngOCmrOCmvuCmnOCmvuCmsA!5e1!3m2!1sbn!2sbd!4v1740316907181!5m2!1sbn!2sbd"
+                allowfullscreen=""></iframe>
+            <div class="wa">
+                <h1> Bakshibazar Help-line </h1>
+                <textarea id="messageBox" placeholder="Type your message here..."></textarea>
+                <button calass="send-btn" style="justify-items: center;" onclick="sendMessage()">Send</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('locationModal').style.display = 'flex';
+        }
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                goBack(); // ESC চাপলে ফাংশন কল হবে
+            }
+        });
+
+        function closeModal() {
+            document.getElementById('locationModal').style.display = 'none';
+            goBack(); // মোডাল ক্লোজ করলে ব্যাক হবে
+        }
+
+        function goBack() {
+            if (window.history.length > 1) {
+                history.back(); // আগের পেজ থাকলে ব্যাক হবে
+            }
+        }
+
+        function sendMessage() {
+            var message = document.getElementById("messageBox").value;
+            var phoneNumber = "+8801313368704";
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
